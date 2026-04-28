@@ -38,35 +38,42 @@ const Brands = () => {
   }, []);
 
   return (
-    // TWEAK: Pastikan section terluar HANYA sebagai block container biasa (tanpa flex, tanpa px-6)
     <section
       ref={sectionRef}
-      className="relative w-full mt-20 pt-24 border-t border-[#fff]/15 overflow-hidden"
+      className="relative w-full mt-12 md:mt-20 pt-16 md:pt-24 border-t border-[#fff]/15 overflow-hidden"
     >
-      
-      {/* INNER WRAPPER: Di sinilah padding dan alignment tengah kita letakkan */}
       <div className="w-full px-6 md:px-12 max-w-6xl mx-auto flex flex-col items-center z-10">
         
         {/* Faded Background Text Effect */}
-        <div className="relative w-full flex flex-col items-center justify-center mb-24 mt-12">
-          <h2 className="font-heading text-4xl md:text-7xl font-bold text-primaryText opacity-5 absolute -top-8 md:-top-16 text-center w-full whitespace-nowrap">
-            Brands That Shipped With Us
+        <div className="relative w-full flex flex-col items-center justify-center mb-16 md:mb-24 mt-12 md:mt-16 px-4">
+          
+          {/* TWEAK: 
+              - Hapus whitespace-nowrap.
+              - Tambah leading-[1.1] agar spasi antar baris rapat saat jadi 2 baris di HP.
+              - Tambah <br className="md:hidden" /> untuk memastikan teks patah rapi di HP tapi tetap sebaris di Desktop.
+              - Top margin disesuaikan (-top-4, -top-2).
+          */}
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primaryText opacity-5 absolute -top-4 md:-top-12 lg:-top-16 text-center w-full leading-[1.1]">
+            Brands That Shipped <br className="md:hidden" /> With Us
           </h2>
-          <h2 className="font-heading text-4xl md:text-7xl font-bold text-primaryText opacity-20 absolute -top-4 md:-top-8 text-center w-full whitespace-nowrap">
-            Brands That Shipped With Us
+          
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primaryText opacity-20 absolute -top-2 md:-top-6 lg:-top-8 text-center w-full leading-[1.1]">
+            Brands That Shipped <br className="md:hidden" /> With Us
           </h2>
-          <h2 className="font-heading text-4xl md:text-7xl font-bold text-primaryText relative z-10 text-center w-full">
-            Brands That Shipped With Us
+          
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primaryText relative z-10 text-center w-full leading-[1.1]">
+            Brands That Shipped <br className="md:hidden" /> With Us
           </h2>
+
         </div>
 
-        {/* Client Logos dengan Intersection Observer */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 items-center justify-items-center w-full">
+        {/* Client Logos */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-24 items-center justify-items-center w-full">
           {brandItems.map((brand, i) => (
             <div
               key={i}
               ref={(el) => { cardRefs.current[i] = el; }}
-              className="w-52 md:w-64 h-32 relative grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500 cursor-pointer"
+              className="w-48 md:w-64 h-24 md:h-32 relative grayscale hover:grayscale-0 hover:scale-105 transition-all duration-500 cursor-pointer"
               style={{
                 opacity: 0,
                 transform: 'translateY(36px)',
@@ -84,9 +91,9 @@ const Brands = () => {
         </div>
       </div>
 
-      {/* Separator / Divider - Karena Section block normal, w-full otomatis full screen presisi */}
-      <div className="w-full h-[55px] mt-32 md:mt-40 border-y border-white/10 bg-[#16191B] flex items-center justify-center">
-        <p className="font-body text-[18px] font-medium text-[#7B7D7E] text-center">
+      {/* Separator / Divider */}
+      <div className="w-full h-[55px] mt-24 md:mt-40 border-y border-white/10 bg-[#16191B] flex items-center justify-center">
+        <p className="font-body text-sm md:text-[18px] font-medium text-[#7B7D7E] text-center px-4">
           Here's What We Actually Do.
         </p>
       </div>
