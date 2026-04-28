@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  /* Konfigurasi Warna Figma */
+  --color-background: #16191B;
+  --color-primaryText: #FFFFFF;
+  --color-secondaryText: #999999;
+  --color-divider: #181B1D;
+  --color-card: #111111;
+
+  /* Konfigurasi Font */
+  --font-heading: var(--font-clash), sans-serif;
+  --font-body: var(--font-mona), sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-primaryText);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+}
+
+/* Locomotive Scroll v5 — native scroll + lerp, no extra CSS needed */
+
+/* Custom Animations untuk Tailwind v4 */
+@layer utilities {
+  .animate-marquee-slow {
+    animation: marquee 35s linear infinite; /* Angka 35s bikin jalannya lebih pelan dan elegan */
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
