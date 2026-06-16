@@ -2,27 +2,7 @@
 
 import React, { MouseEvent, useState } from 'react';
 import Image from 'next/image';
-
-const projects = [
-  {
-    id: '01',
-    title: 'HALAL HERO',
-    description: 'Thousands of UMKM now get halal certified without the paperwork nightmare.',
-    image: '/Halalhero_Projects_3.png', 
-  },
-  {
-    id: '02',
-    title: 'DOT PROJECTS',
-    description: 'A Singapore consultancy finally has a digital presence that matches their 10 years of expertise.',
-    image: '/DotProjects_Projects_2.png',
-  },
-  {
-    id: '03',
-    title: 'QUESERA SKRIPSI',
-    description: 'Students stop procrastinating and actually finish their thesis, one chapter at a time.',
-    image: '/Quesera_Projects_1.png',
-  }
-];
+import { projects } from '@/lib/content';
 
 const SelectedWorks = () => {
   // State untuk melacak mode tampilan saat ini

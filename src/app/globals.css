@@ -35,9 +35,19 @@
   .animate-marquee-slow {
     animation: marquee 35s linear infinite; /* Angka 35s bikin jalannya lebih pelan dan elegan */
   }
+
+  .animate-spin-3d {
+    animation: spin-3d 14s linear infinite;
+    transform-style: preserve-3d;
+  }
 }
 
 @keyframes marquee {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-100%); }
+}
+
+@keyframes spin-3d {
+  0% { transform: rotateX(-10deg) rotateY(0deg); }
+  100% { transform: rotateX(-10deg) rotateY(360deg); }
 }

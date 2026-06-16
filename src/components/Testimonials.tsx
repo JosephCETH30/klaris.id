@@ -1,25 +1,5 @@
 import React from 'react';
-
-const testimonials = [
-  {
-    id: '01',
-    name: 'Gorbiyan Khurmaini',
-    role: 'CEO, HalalHero.id',
-    quote: '"Yosef finds solutions and ideas incredibly fast. We first met during a 2023 internship – and out of everyone, he was the one who actually built the website. Two years of working together, and it\'s been one of the most impactful partnerships we\'ve had. Worth every bit of it."',
-  },
-  {
-    id: '02',
-    name: 'Michela Vieri',
-    role: 'Product Designer NUS',
-    quote: '"He\'s fast – especially for someone at his level. I gave him a one-week deadline, and he finished ahead of schedule. Open to feedback, takes revisions well. So far, really helpful to work with."',
-  },
-  {
-    id: '03',
-    name: 'Yosef Rafael',
-    role: 'CEO, Quesera.id',
-    quote: '"I can\'t exactly review myself, can I? I built both Quesera.id and Klaris.id from scratch – solo. So instead of a testimonial, just go check the product. That\'s my review."',
-  }
-];
+import { testimonials } from '@/lib/content';
 
 const Testimonials = () => {
   return (
@@ -73,7 +53,7 @@ const Testimonials = () => {
               {/* Card Body: Quote */}
               <div className="mt-12 md:mt-0">
                 <p className="font-body text-[#7B7D7E] text-base md:text-lg leading-relaxed">
-                  {item.quote}
+                  &ldquo;{item.quote}&rdquo;
                 </p>
               </div>
 

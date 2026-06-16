@@ -28,9 +28,9 @@ const Footer = () => {
             </div>
             
             <ul className="flex flex-col gap-6 font-body text-[#7B7D7E] text-xl md:text-2xl">
-              <li><Link href="#work" className="hover:text-[#FFFFFF] transition-colors">Work</Link></li>
-              <li><Link href="#about" className="hover:text-[#FFFFFF] transition-colors">About Us</Link></li>
-              <li><Link href="#services" className="hover:text-[#FFFFFF] transition-colors">Services</Link></li>
+              <li><Link href="/work" className="hover:text-[#FFFFFF] transition-colors">Work</Link></li>
+              <li><Link href="/about-us" className="hover:text-[#FFFFFF] transition-colors">About Us</Link></li>
+              <li><Link href="/testimonials" className="hover:text-[#FFFFFF] transition-colors">Testimonials</Link></li>
             </ul>
           </div>
           

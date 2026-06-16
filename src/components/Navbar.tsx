@@ -4,7 +4,11 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const NAV_ITEMS = ['Work', 'About Us', 'Testimonials'];
+const NAV_ITEMS = [
+  { label: 'Work', href: '/work' },
+  { label: 'About Us', href: '/about-us' },
+  { label: 'Testimonials', href: '/testimonials' },
+];
 const STRIP_COUNT = 5;
 
 const Navbar = () => {
@@ -54,7 +58,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4 md:gap-6 z-50">
           {/* TWEAK: Sembunyikan 'Lets Talk' di layar kecil (hidden md:flex) */}
           <Link
-            href="#contact"
+            href="mailto:work@klaris.id"
             className="cursor-pointer hidden md:flex items-center gap-2 font-body text-sm font-medium text-primaryText hover:text-secondaryText transition-colors"
           >
             Lets Talk
@@ -131,10 +135,9 @@ const Navbar = () => {
         <nav className="flex flex-col text-center gap-8 md:gap-10">
           {NAV_ITEMS.map((item, index) => (
             <Link
-              key={index}
-              href={`#${item.toLowerCase().replace(' ', '-')}`}
+              key={item.href}
+              href={item.href}
               onClick={() => setIsMenuOpen(false)}
-              // TWEAK: Teks menu diperkecil untuk layar HP (text-4xl vs text-[5.5rem])
               className="font-heading text-4xl md:text-[5.5rem] font-bold text-primaryText hover:text-secondaryText tracking-tight"
               style={{
                 opacity: isMenuOpen ? 1 : 0,
@@ -145,13 +148,13 @@ const Navbar = () => {
                   : `${index * 30}ms`,
               }}
             >
-              {item}
+              {item.label}
             </Link>
           ))}
           
           {/* TWEAK: Munculkan 'Lets Talk' di dalam menu HANYA untuk versi mobile */}
           <Link
-            href="#contact"
+            href="mailto:work@klaris.id"
             onClick={() => setIsMenuOpen(false)}
             className="md:hidden mt-8 flex items-center justify-center gap-2 font-body text-lg font-medium text-primaryText hover:text-secondaryText transition-colors"
             style={{

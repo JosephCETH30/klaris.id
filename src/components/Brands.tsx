@@ -2,12 +2,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
-
-const brandItems = [
-  { label: 'Halal Hero', src: '/halalheroidlogo-upscale 1.png' },
-  { label: 'DotProjects', src: '/Gemini_Generated_Image_8dxcfa8dxcfa8dxc 1.png' },
-  { label: 'QQ', src: '/Gemini_Generated_Image_smwenysmwenysmwe 1.png' },
-];
+import { brandItems } from '@/lib/content';
 
 const Brands = () => {
   const sectionRef = useRef<HTMLElement>(null);
