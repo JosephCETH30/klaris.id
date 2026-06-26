@@ -1,6 +1,7 @@
 export const projects = [
   {
     id: '01',
+    slug: 'halal-hero',
     title: 'HALAL HERO',
     description: 'Thousands of UMKM now get halal certified without the paperwork nightmare.',
     image: '/Halalhero_Projects_3.png',
@@ -8,9 +9,17 @@ export const projects = [
     year: '2024',
     stack: ['Next.js', 'React', 'Tailwind CSS'],
     outcome: 'Halal certification workflow digitized end-to-end for UMKM across Indonesia.',
+    challenge:
+      'UMKM owners across Indonesia were drowning in fragmented halal certification paperwork — forms scattered across agencies, no clear progress tracking, and weeks lost to manual follow-ups.',
+    solution:
+      'We designed and built a full web platform that guides businesses through every certification step — document upload, status tracking, and agency coordination in one place.',
+    role: 'Product strategy, UI/UX design, and full-stack web development.',
+    deliverables: ['Web Platform', 'Admin Dashboard', 'Document Workflow'],
+    testimonialId: '01',
   },
   {
     id: '02',
+    slug: 'dot-projects',
     title: 'DOT PROJECTS',
     description: 'A Singapore consultancy finally has a digital presence that matches their 10 years of expertise.',
     image: '/DotProjects_Projects_2.png',
@@ -18,9 +27,17 @@ export const projects = [
     year: '2024',
     stack: ['Next.js', 'Framer Motion', 'CMS'],
     outcome: 'Brand positioning elevated with a site that converts visitors into consultation leads.',
+    challenge:
+      'After a decade of consultancy work, Dot Projects had no digital presence that reflected the quality of their expertise — prospects had nothing to evaluate before booking a call.',
+    solution:
+      'A polished corporate website with motion-driven storytelling, case study sections, and a CMS-backed content layer so the team can update projects without touching code.',
+    role: 'Brand-aligned web design, frontend development, and CMS integration.',
+    deliverables: ['Corporate Website', 'CMS Setup', 'Motion Design'],
+    testimonialId: '02',
   },
   {
     id: '03',
+    slug: 'quesera-skripsi',
     title: 'QUESERA SKRIPSI',
     description: 'Students stop procrastinating and actually finish their thesis, one chapter at a time.',
     image: '/Quesera_Projects_1.png',
@@ -28,8 +45,25 @@ export const projects = [
     year: '2023',
     stack: ['React', 'Node.js', 'PostgreSQL'],
     outcome: 'Thesis completion rate improved through guided chapter-by-chapter workflows.',
+    challenge:
+      'University students kept stalling on their thesis — overwhelmed by structure, unsure where to start, and lacking a system to track progress chapter by chapter.',
+    solution:
+      'An EdTech SaaS that breaks the thesis into guided chapters with deadlines, writing prompts, and progress dashboards — turning a mountain into manageable steps.',
+    role: 'End-to-end product design and full-stack SaaS development.',
+    deliverables: ['SaaS Platform', 'Chapter Workflow', 'Progress Dashboard'],
+    testimonialId: '03',
   },
-];
+] as const;
+
+export type Project = (typeof projects)[number];
+
+export function getProjectBySlug(slug: string): Project | undefined {
+  return projects.find((project) => project.slug === slug);
+}
+
+export function getAllProjectSlugs(): string[] {
+  return projects.map((project) => project.slug);
+}
 
 export const services = [
   {

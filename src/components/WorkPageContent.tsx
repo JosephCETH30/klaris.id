@@ -2,6 +2,7 @@
 
 import React, { MouseEvent } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import SubPageHero from '@/components/SubPageHero';
 import SectionHeader from '@/components/SectionHeader';
 import PageDivider from '@/components/PageDivider';
@@ -33,7 +34,7 @@ const WorkPageContent = () => {
 
         <div className="flex flex-col gap-24 md:gap-32">
           {projects.map((project) => (
-            <div key={project.id} className="w-full flex flex-col group">
+            <Link key={project.id} href={`/work/${project.slug}`} className="w-full flex flex-col group">
               <div
                 className="w-full relative overflow-hidden bg-[#111111] mb-6 md:mb-8 rounded-sm group/img cursor-none h-[300px] md:h-[650px]"
                 onMouseMove={handleMouseMove}
@@ -101,7 +102,7 @@ const WorkPageContent = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

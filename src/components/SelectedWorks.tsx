@@ -2,6 +2,7 @@
 
 import React, { MouseEvent, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { projects } from '@/lib/content';
 
 const SelectedWorks = () => {
@@ -66,7 +67,7 @@ const SelectedWorks = () => {
         {/* Projects Stack - Berubah dinamis sesuai State */}
         <div className={`transition-all duration-500 w-full ${viewMode === 'list' ? 'flex flex-col gap-24 md:gap-32' : 'grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16'}`}>
           {projects.map((project) => (
-            <div key={project.id} className="w-full flex flex-col cursor-pointer group">
+            <Link key={project.id} href={`/work/${project.slug}`} className="w-full flex flex-col cursor-pointer group">
               
               {/* Image Container */}
               <div 
@@ -114,7 +115,7 @@ const SelectedWorks = () => {
                 </p>
               </div>
 
-            </div>
+            </Link>
           ))}
         </div>
 

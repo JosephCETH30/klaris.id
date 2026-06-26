@@ -61,7 +61,7 @@ const Footer = () => {
                 work@klaris.id
               </a>
               <a href="tel:+628121002126" className="hover:text-[#7B7D7E] transition-colors">
-                +62 812 1002 126
+                +62 812 999 250
               </a>
             </div>
           </div>

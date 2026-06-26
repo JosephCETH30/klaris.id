@@ -73,14 +73,14 @@ const TestimonialsPageContent = () => {
 
       <section className="relative w-full px-6 md:px-12 py-32 bg-background overflow-hidden">
         <div className="relative w-full flex flex-col items-center justify-center mb-16 md:mb-24">
-          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-primaryText opacity-5 absolute -top-4 md:-top-12 text-center w-full leading-[1.1]">
-            Brands That Shipped With Us
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-primaryText opacity-5 absolute -top-4 md:-top-12 text-center w-full leading-[1.1] text-balance">
+            Brands That Shipped <span className="whitespace-nowrap">With Us</span>
           </h2>
-          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-primaryText opacity-20 absolute -top-2 md:-top-6 text-center w-full leading-[1.1]">
-            Brands That Shipped With Us
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-primaryText opacity-20 absolute -top-2 md:-top-6 text-center w-full leading-[1.1] text-balance">
+            Brands That Shipped <span className="whitespace-nowrap">With Us</span>
           </h2>
-          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-primaryText relative z-10 text-center w-full leading-[1.1]">
-            Brands That Shipped With Us
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold text-primaryText relative z-10 text-center w-full leading-[1.1] text-balance">
+            Brands That Shipped <span className="whitespace-nowrap">With Us</span>
           </h2>
         </div>
 

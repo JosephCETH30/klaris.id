@@ -48,16 +48,13 @@ const Brands = () => {
               - Tambah <br className="md:hidden" /> untuk memastikan teks patah rapi di HP tapi tetap sebaris di Desktop.
               - Top margin disesuaikan (-top-4, -top-2).
           */}
-          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primaryText opacity-5 absolute -top-4 md:-top-12 lg:-top-16 text-center w-full leading-[1.1]">
-            Brands That Shipped <br className="md:hidden" /> With Us
+          
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primaryText opacity-20 absolute -top-2 md:-top-6 lg:-top-8 text-center w-full leading-[1.1] text-balance">
+            Trusted By
           </h2>
           
-          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primaryText opacity-20 absolute -top-2 md:-top-6 lg:-top-8 text-center w-full leading-[1.1]">
-            Brands That Shipped <br className="md:hidden" /> With Us
-          </h2>
-          
-          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primaryText relative z-10 text-center w-full leading-[1.1]">
-            Brands That Shipped <br className="md:hidden" /> With Us
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primaryText relative z-10 text-center w-full leading-[1.1] text-balance">
+            Trusted By
           </h2>
 
         </div>
